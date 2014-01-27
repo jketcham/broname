@@ -1,15 +1,16 @@
-<header>
-  <div class="page-title">
-    <h1>Broname</h1>
-  </div>
-</header>
 <div class="row">
   <div class="col-md-12">
-    <h3>Find your broname, bro</h3>
+    <button type="button" class="btn btn-default btn-lg" ng-click="broMe()">Bro</button>
   </div>
 </div>
 <div class="row">
-  <div class="col-md-12">
-    <button>Bro</button>
+  <div class="col-md-6">
+    <div class="broOutput">
+      {{broName}}
+    </div>
+  </div>
+  <div class="col-md-6">
+    <input type="text" class="form-control" ng-model="name.bro">
+    {{name.bro}}
   </div>
 </div>

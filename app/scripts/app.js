@@ -10,7 +10,7 @@ angular.module('bronameApp', [
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: 'BroMe'
       })
       .otherwise({
         redirectTo: '/'

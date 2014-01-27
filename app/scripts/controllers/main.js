@@ -1,10 +1,24 @@
 'use strict';
 
 angular.module('bronameApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
+  .controller('BroMe', function ($scope) {
+    var broNames = [
+      'Brohammad',
+      'Broback Brobamma',
+      'Broheim',
+      'Broski',
+      'Bromo',
+      'Brotien',
+      'Brodeo',
+      'Brohan',
+      'Brosicle',
     ];
+    
+    $scope.broName = broNames[Math.floor(Math.random() * broNames.length)];
+  })
+  .controller('generateBroName', function ($scope, name) {
+    $scope.getName = function(name) {
+      var lameName;
+      return $scope.lameName;
+    };
   });
