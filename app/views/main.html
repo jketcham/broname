@@ -5,3 +5,17 @@
     </div>
   </div>
 </div>
+<script>
+function resize() {
+  var heights = window.outerHeight;
+  var fullElement = document.getElementById('full');
+  var footer = document.getElementsByClassName('bottom').outerHeight;
+  console.log(footer);
+  fullElement.style.height = heights - footer + 'px';
+  fullElement.style.paddingTop = heights/4 + 'px';
+}
+resize();
+window.onresize = function() {
+  resize();
+}
+</script>
