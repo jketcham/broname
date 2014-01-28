@@ -15,10 +15,4 @@ angular.module('bronameApp')
     ];
     
     $scope.broName = broNames[Math.floor(Math.random() * broNames.length)];
-  })
-  .controller('generateBroName', function ($scope, name) {
-    $scope.getName = function(name) {
-      var lameName;
-      return $scope.lameName;
-    };
   });
