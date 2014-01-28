@@ -4,7 +4,8 @@ angular.module('bronameApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'ngFitText'
 ])
   .config(function ($routeProvider) {
     $routeProvider
