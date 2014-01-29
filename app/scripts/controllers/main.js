@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('bronameApp')
-  .controller('BroMe', function ($scope) {
+  .controller('broname', function ($scope) {
     var broNames = [
       'Brohammad Ali',
       'Broback Brobamma',
