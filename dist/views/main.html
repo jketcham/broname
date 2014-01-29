@@ -1,12 +1,1 @@
-<div class="row"><div class="col-md-12"><div class="bro-name" id="full"><h1 data-fittext=".65">{{broName}}</h1></div></div></div><script>function resize() {
-  var heights = window.outerHeight;
-  var fullElement = document.getElementById('full');
-  var footer = document.getElementsByClassName('bottom').outerHeight;
-  console.log(footer);
-  fullElement.style.height = heights - footer + 'px';
-  fullElement.style.paddingTop = heights/4 + 'px';
-}
-resize();
-window.onresize = function() {
-  resize();
-}</script>
+<div class="row"><div class="col-md-12"><div class="bro-name" id="full"><h1>{{broName}}</h1></div></div></div><div class="row"><div class="col-md-6 well"><form><textarea ng-model="text-input" palceholder="Bro..." focus=""></textarea></form></div><div class="col-md-6 well"><p></p></div></div>

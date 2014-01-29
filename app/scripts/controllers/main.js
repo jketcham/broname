@@ -56,7 +56,7 @@ angular.module('bronameApp')
       'Brozilla',
       'Broseph Goebbles',
       'Brofessional',
-      'vincent van brogh',
+      'Vincent Van Brogh',
       'Edgar Allen Bro',
       'Napoleon Broneparte',
       'James Monbroe',
