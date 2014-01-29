@@ -5,13 +5,15 @@ angular.module('bronameApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'ngFitText'
+  'ngFitText',
+  'bronameApp.filters',
+  'bronameApp.directives'
 ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'BroMe'
+        controller: 'broname'
       })
       .otherwise({
         redirectTo: '/'
