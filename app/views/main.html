@@ -8,10 +8,10 @@
 <div class="row">
   <div class="col-md-6 well">
     <form>
-      <textarea ng-model="text-input" palceholder="Bro..." focus></textarea>
+      <textarea ng-model="broWord" palceholder="Bro..." focus></textarea>
     </form>
   </div>
   <div class="col-md-6 well">
-    <p></p>
+    <p>{{broWord|broTranslate}}</p>
   </div>
 </div>
