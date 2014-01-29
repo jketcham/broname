@@ -1,6 +1,8 @@
+'use strict';
+
 angular.module('bronameApp.filters', []).
   filter('broTranslate', function() {
-    var str_split = function(string, split_length) {
+    var strSplit = function(string, splitLength) {
       // http://kevin.vanzonneveld.net
       // +     original by: Martijn Wieringa
       // +     improved by: Brett Zamir (http://brett-zamir.me)
@@ -8,12 +10,12 @@ angular.module('bronameApp.filters', []).
       // +      revised by: Theriault
       // +        input by: Bjorn Roesbeke (http://www.bjornroesbeke.be/)
       // +      revised by: Rafał Kukawski (http://blog.kukawski.pl/)
-      // *       example 1: str_split('Hello Friend', 3);
+      // *       example 1: strSplit('Hello Friend', 3);
       // *       returns 1: ['Hel', 'lo ', 'Fri', 'end']
-      if (split_length === null) {
-        split_length = 1;
+      if (splitLength === null) {
+        splitLength = 1;
       }
-      if (string === null || split_length < 1) {
+      if (string === null || splitLength < 1) {
         return false;
       }
       string += '';
@@ -21,7 +23,7 @@ angular.module('bronameApp.filters', []).
         pos = 0,
         len = string.length;
       while (pos < len) {
-        chunks.push(string.slice(pos, pos += split_length));
+        chunks.push(string.slice(pos, pos += splitLength));
       }
 
       return chunks;
@@ -29,20 +31,38 @@ angular.module('bronameApp.filters', []).
 
     var translate = function(word) {
       // Don't translate short words
-      if (word.length == 1) {
+      if (word.length === 1) {
         return word;
       }
 
       // Before translating, keep a reference of the original word
       var originalWord = word;
+      // Grab the first character of word
+      var firstChar = originalWord.charAt(0);
 
       // BRADLEY -> BRODLEY
-      word = word.replace(/Br/g, 'Bro');
+      word = word.replace(/Bra/gi, 'bro');
+      //word = word.replace(/Pro/gi, 'Bro');
 
-      // Keep Y as first character
-      // YES -> ERS -> YERS
-      if (originalWord.charAt(0) == 'Y') {
-        word = 'Bro' + word;
+      // If it's a short word, just add "Br"
+      if (originalWord.length <= 3){
+        word = word.replace(firstChar, 'Br');
+      }
+
+      if (originalWord.charAt(1) === 'r'){
+        word = word.replace(originalWord.indexOf(0,2), 'bro');
+      }
+
+      // The good stuff: replace character at beginning with "bro", or "br" if second character is an "o"
+      if (originalWord.charAt(1) !== 'o') {
+        word = word.replace(firstChar, 'Bro');
+      } else {
+        word = word.replace(firstChar, 'Br');
+      }
+
+      if (originalWord.charAt(originalWord.length - 1) === 'b') {
+        var change = originalWord.charAt(originalWord.length - 1);
+        word = word.replace(change, 'bro');
       }
 
       return word;
@@ -53,7 +73,9 @@ angular.module('bronameApp.filters', []).
         return 'Broski...';
       }
 
-      var lines = broWord.split("\n"),
+      broWord = broWord.toLowerCase();
+
+      var lines = broWord.split('\n'),
         translatedLines = [];
       for (var k in lines) {
         var words = lines[k].split(' '),
@@ -76,6 +98,6 @@ angular.module('bronameApp.filters', []).
         translatedLines.push(translatedWords.join(' '));
       }
 
-      return translatedLines.join("\n");
+      return translatedLines.join('\n');
     };
   });
