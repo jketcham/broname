@@ -3,8 +3,9 @@
 angular.module('bronameApp')
   .controller('BroMe', function ($scope) {
     var broNames = [
-      'Brohammad',
+      'Brohammad Ali',
       'Broback Brobamma',
+      'Mitt Bromney',
       'Broheim',
       'Broski',
       'Bromo',
@@ -48,8 +49,33 @@ angular.module('bronameApp')
       'Broda',
       'Scarlett Brohansson',
       'Brobe Bryant',
-      'Brobe Beef'
+      'Brobe Beef',
+      'Brovakin',
+      'Brobi Wan Kenobi',
+      'Brosa Parks',
+      'Brozilla',
+      'Broseph Goebbles',
+      'Brofessional',
+      'vincent van brogh',
+      'Edgar Allen Bro',
+      'Napoleon Broneparte',
+      'James Monbroe',
+      'Bronald Reagan',
+      'Theodore Brosevelt',
+      'Brover Cleveland',
+      'Bromas Jefferson',
+      'Jabroni',
+      'Brolaf',
+      'Ringbro Starr',
+      'Rainbro Dash',
+      'Neville Longbrottom',
+      'Lord Brodemort',
+      'Bronald Weasley',
+      'Bronando',
+      'Bromeo',
+      'Indiana Brones',
+      'Han Brolo',
+      'Tim Tebro'
     ];
-    
     $scope.broName = broNames[Math.floor(Math.random() * broNames.length)];
   });
