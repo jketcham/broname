@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('bronameApp')
-  .controller('BroMe', function ($scope) {
+  .controller('broname', function ($scope) {
     var broNames = [
       'Brohammad Ali',
       'Broback Brobamma',
@@ -56,7 +56,7 @@ angular.module('bronameApp')
       'Brozilla',
       'Broseph Goebbles',
       'Brofessional',
-      'vincent van brogh',
+      'Vincent Van Brogh',
       'Edgar Allen Bro',
       'Napoleon Broneparte',
       'James Monbroe',
