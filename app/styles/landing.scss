@@ -11,11 +11,32 @@
     font-family: 'Montserrat', sans-serif;
   }
 }
+.bn-translate {
+  height: 300px;
+}
+.well {
+  height: 100%;
+  background-color: #ffffff;
+}
 textarea {
-  border: 0;
+  background-color: #ffffff;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  resize: none;
   width: 100%;
   height: 100%;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+  &:focus {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    outline: 0;
+  }
+}
+form {
+  height: 100%;
 }
