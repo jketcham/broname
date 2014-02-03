@@ -40,29 +40,29 @@ angular.module('bronameApp.filters', []).
       // Grab the first character of word
       var firstChar = originalWord.charAt(0);
 
-      // BRADLEY -> BRODLEY
-      word = word.replace(/Bra/gi, 'bro');
-      //word = word.replace(/Pro/gi, 'Bro');
+      // Vowel checker - For loop quicker than regexp, though not as pretty
+      var vowels = new Array('a', 'e', 'i', 'o', 'u');
+      function isVowel(char) {
+        if (char.length === 1) {
+          var len = vowels.length;
+          for (var i = 0; i < len; i++) {
+            if (vowels[i] === char) {
+              return true;
+            }
+          }
+          return false;
+        }
+      }
 
-      // If it's a short word, just add "Br"
-      if (originalWord.length <= 3){
+      // The good stuff: replace character at beginning with "bro", or "br" if second character is a vowel
+      if (isVowel(originalWord.charAt(1))) {
         word = word.replace(firstChar, 'Br');
-      }
-
-      if (originalWord.charAt(1) === 'r'){
-        word = word.replace(originalWord.indexOf(0,2), 'bro');
-      }
-
-      // The good stuff: replace character at beginning with "bro", or "br" if second character is an "o"
-      if (originalWord.charAt(1) !== 'o') {
-        word = word.replace(firstChar, 'Bro');
       } else {
-        word = word.replace(firstChar, 'Br');
-      }
-
-      if (originalWord.charAt(originalWord.length - 1) === 'b') {
-        var change = originalWord.charAt(originalWord.length - 1);
-        word = word.replace(change, 'bro');
+        if (originalWord.charAt(1) === 'r' && isVowel(originalWord.charAt(2))) {
+          word = word.replace(originalWord.substring(0, 3), 'Bro');
+        } else {
+          word = word.replace(firstChar, 'Bro');
+        }
       }
 
       return word;
