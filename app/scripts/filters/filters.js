@@ -31,7 +31,7 @@ angular.module('bronameApp.filters', []).
 
     var translate = function(word) {
       // Don't translate short words
-      if (word.length === 1) {
+      if (word.length <= 2) {
         return word;
       }
 
