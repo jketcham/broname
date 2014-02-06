@@ -15,7 +15,7 @@ angular.module('bronameApp')
       'Brosicle',
       'Broseidon',
       'Brolonius',
-      'ABroham',
+      'Abroham',
       'Marco Brolo',
       'Brozo the Clown',
       'Brometheus',
