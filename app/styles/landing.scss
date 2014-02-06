@@ -11,12 +11,23 @@
     font-family: 'Montserrat', sans-serif;
   }
 }
+.bn-title {
+  margin-top: 0;
+}
 .bn-translate {
   height: 300px;
+  margin-bottom: 60px;
+  p {
+    margin: 0 0 20px;
+  }
+  .well {
+    height: 100%;
+    overflow: overlay;
+    background-color: #ffffff;
+  }
 }
-.well {
+.bn-inner {
   height: 100%;
-  background-color: #ffffff;
 }
 textarea {
   background-color: #ffffff;
@@ -44,4 +55,10 @@ form {
 footer {
   position: absolute;
   bottom: 0;
+}
+
+@media (max-width: $screen-md-min) {
+  .bn-translate {
+    height: inherit;
+  }
 }
