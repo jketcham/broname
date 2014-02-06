@@ -57,8 +57,9 @@ footer {
   bottom: 0;
 }
 
-@media (max-width: $screen-md-min) {
+@media (max-width: 992px) {
   .bn-translate {
     height: inherit;
+    margin-bottom: 0;
   }
 }
