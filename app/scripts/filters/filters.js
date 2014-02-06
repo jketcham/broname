@@ -56,14 +56,16 @@ angular.module('bronameApp.filters', []).
 
       // The good stuff: replace character at beginning with "bro", or "br" if second character is a vowel
       if (isVowel(originalWord.charAt(1))) {
-        word = word.replace(firstChar, 'Br');
+        word = word.replace(firstChar, 'br');
       } else {
         if (originalWord.charAt(1) === 'r' && isVowel(originalWord.charAt(2))) {
-          word = word.replace(originalWord.substring(0, 3), 'Bro');
+          word = word.replace(originalWord.substring(0, 3), 'bro');
         } else {
-          word = word.replace(firstChar, 'Bro');
+          word = word.replace(firstChar, 'bro');
         }
       }
+
+      word = word.replace(/bo/, 'bro');
 
       return word;
     };
