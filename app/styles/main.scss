@@ -4,6 +4,7 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 @import 'header';
 @import 'landing';
 @import 'variables';
+@import 'ss-social-regular';
 
 .browsehappy {
   margin: 0.2em 0;
@@ -21,7 +22,19 @@ body {
 }
 
 hr {
-    border-top: 1px solid #000;
+  border-top: 1px solid #000;
+}
+
+a {
+  color: #e74c3c;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  &:hover {
+    color: #c0392b;
+  }
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -34,7 +47,7 @@ hr {
 
 /* Custom page header */
 .header {
-    border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 /* Make the masthead heading the same height as the navigation */
@@ -45,15 +58,18 @@ hr {
   padding-bottom: 19px;
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+.share-button {
+  float: right;
 }
 
-.container-narrow > hr {
-      
+.meta-links {
+  a {
+    text-decoration: none;
+  }
+  .ss-octocat {
+    vertical-align: middle;
+    font-size: 18px;
+  }
 }
 
 /* Main marketing message and sign up button */
