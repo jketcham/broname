@@ -6,24 +6,29 @@
   </div>
 </div>
 <div class="row bn-translate">
-  <div class="col-md-6 well">
-    <form>
-      <textarea ng-model="broWord" palceholder="Bro..." focus></textarea>
-    </form>
+  <div class="col-md-6 bn-inner">
+    <h4>Lame:</h4>
+    <div class="well">
+      <form>
+        <textarea ng-model="broWord" palceholder="Bro..." focus></textarea>
+      </form>
+    </div>
   </div>
-  <div class="col-md-6 well">
-    <p>{{broWord|broTranslate}}</p>
+  <div class="col-md-6 bn-inner">
+    <h4>Bro:</h4>
+    <div class="well">
+      <p>{{broWord|broTranslate}}</p>
+    </div>
   </div>
 </div>
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-6 col-xs-6">
     <ul class="list-inline meta-links">
       <li>By <a href="http://twitter.com/_jket">Jack Ketcham</a></li>
       <li><a href="http://github.com/jketcham/broname"><span class="ss-octocat"></span></a></li>
     </ul>
   </div>
-  <div class="col-md-4"></div>
-  <div class="col-md-4">
+  <div class="col-md-6 col-xs-6">
     <div class="share-button"></div>
   </div>
 </div>
@@ -32,6 +37,8 @@ $('.share-button').share({
   url: 'http://brona.me/',
   text: 'Find your bro name, bro.',
   flyout: 'top center',
+  background: '#e74c3c',
+  color: '#fff',
   facebook: {
     name: 'Broname',
     link: 'http://brona.me',
