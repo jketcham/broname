@@ -14,6 +14,7 @@ Simply clone the repo, then ``npm install`` & ``bower install`` to build the ini
 ## Using
 - [AngularJS](http://angularjs.org/)
 - [Twitter Bootstrap](http://getbootstrap.com/)
+- [ng-FitText.js](https://github.com/patrickmarabeas/ng-FitText.js)
 
 <hr>
 Built by [@_jket](http://twitter.com/_jket)
